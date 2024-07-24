@@ -8,11 +8,23 @@
 import SwiftUI
 
 struct AppBarButton: View {
+    let title: String
+    let tabNumber: AppBarItem
+    @Binding var selectedTab: AppBarItem
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button(action: {selectedTab = tabNumber}, label: {
+            Text(title)
+                .font(.headline)
+                .foregroundStyle(.black)
+                .padding(.bottom, 4)
+                .overlay(
+                    selectedTab == tabNumber ? AnyView(                       
+                        Rectangle()
+                        .frame(height: 4)
+                        .foregroundStyle(.green)
+                        .offset(y: 7)): AnyView(EmptyView()),
+                    alignment: .bottom
+                )
+        })
     }
-}
-
-#Preview {
-    AppBarButton()
 }

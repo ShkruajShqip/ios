@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct EntriesView: View {
+struct SearchView: View {
     var body: some View {
-        Text("This is Entries View")
+        Text("This is Search View")
     }
 }
 
 #Preview {
-    EntriesView()
+    SearchView()
 }

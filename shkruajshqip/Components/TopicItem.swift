@@ -8,11 +8,19 @@
 import SwiftUI
 
 struct TopicItem: View {
+    let topicTitle: String
+    let entryCount: String
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Text(topicTitle)
+                .font(.title2)
+                .fontWeight(.semibold)
+            Spacer()
+            Text(entryCount)
+        }
     }
 }
 
 #Preview {
-    TopicItem()
+    TopicItem(topicTitle: "ShkruajShqip po zhvillohet", entryCount: "25")
 }

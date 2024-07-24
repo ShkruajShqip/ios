@@ -7,50 +7,23 @@
 
 import SwiftUI
 
+enum AppBarItem {
+    case today
+    case latest
+    case favourites
+}
+
 struct AppBar: View {
-    @State private var tab: Int = 1
+    @State private var tab: AppBarItem = .today
     var body: some View {
         HStack {
-            Button(action: {tab = 1}, label: {
-                Text("today")
-                    .font(.headline)
-                    .foregroundStyle(.black)
-                    .padding(.bottom, 4)
-                    .overlay(
-                        tab == 1 ? AnyView(                        Rectangle()
-                            .frame(height: 5)
-                            .foregroundStyle(.green)
-                            .offset(y: 10)): AnyView(EmptyView()),
-                        alignment: .bottom
-                    )
-            })
-            Button(action: {tab = 2}, label: {
-                Text("latest")
-                    .font(.headline)
-                    .foregroundStyle(.black)
-                    .padding(.bottom, 4)
-                    .overlay(
-                        tab == 2 ? AnyView(                        Rectangle()
-                            .frame(height: 5)
-                            .foregroundStyle(.green)
-                            .offset(y: 10)): AnyView(EmptyView()),
-                        alignment: .bottom
-                    )
-            })
-            Button(action: {tab = 3}, label: {
-                Text("favourites")
-                    .font(.headline)
-                    .foregroundStyle(.black)
-                    .padding(.bottom, 4)
-                    .overlay(
-                        tab == 3 ? AnyView(                        Rectangle()
-                            .frame(height: 5)
-                            .foregroundStyle(.green)
-                            .offset(y: 10)): AnyView(EmptyView()),
-                        alignment: .bottom
-                    )
-            })
+            AppBarButton(title: "today", tabNumber: .today, selectedTab: $tab)
+            AppBarButton(title: "favourites", tabNumber: .latest, selectedTab: $tab)
+            AppBarButton(title: "latest", tabNumber: .favourites, selectedTab: $tab)
         }
+        .padding(.horizontal, 60)
+        .padding(.vertical, 30)
+        .frame(maxWidth: .infinity, alignment: .center)
     }
 }
 

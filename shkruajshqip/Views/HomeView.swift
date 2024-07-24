@@ -9,7 +9,14 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        AppBar()
+        List {
+            TopicItem(topicTitle: "ShkruajShqip po zhvillohet", entryCount: "25")
+            TopicItem(topicTitle: "ShkruajShqip po zhvillohet", entryCount: "25")
+            TopicItem(topicTitle: "ShkruajShqip po zhvillohet", entryCount: "25")
+            TopicItem(topicTitle: "ShkruajShqip po zhvillohet", entryCount: "25")
+            TopicItem(topicTitle: "ShkruajShqip po zhvillohet", entryCount: "25")
+        }
     }
 }
 
