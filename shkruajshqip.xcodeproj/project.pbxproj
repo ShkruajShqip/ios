@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C1847392C53035E004204B5 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1847382C53035E004204B5 /* RegisterView.swift */; };
+		2C18473D2C5303E9004204B5 /* InputFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C18473C2C5303E9004204B5 /* InputFieldView.swift */; };
+		2C18473F2C530B8F004204B5 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C18473E2C530B8F004204B5 /* LoginView.swift */; };
 		2CE3CD492C4D7F2400930854 /* shkruajshqipApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE3CD482C4D7F2400930854 /* shkruajshqipApp.swift */; };
 		2CE3CD4B2C4D7F2400930854 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE3CD4A2C4D7F2400930854 /* ContentView.swift */; };
 		2CE3CD4D2C4D7F2500930854 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CE3CD4C2C4D7F2500930854 /* Assets.xcassets */; };
@@ -27,6 +30,7 @@
 		2CE3CD902C51A04D00930854 /* TopBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE3CD8F2C51A04D00930854 /* TopBarButton.swift */; };
 		2CE3CD932C51B54700930854 /* AppBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE3CD922C51B54700930854 /* AppBarButton.swift */; };
 		2CE3CD952C51BBD200930854 /* TopicItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE3CD942C51BBD200930854 /* TopicItem.swift */; };
+		2CE3CD972C52E89B00930854 /* TopicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE3CD962C52E89B00930854 /* TopicModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C1847382C53035E004204B5 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		2C18473C2C5303E9004204B5 /* InputFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldView.swift; sourceTree = "<group>"; };
+		2C18473E2C530B8F004204B5 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		2CE3CD452C4D7F2400930854 /* shkruajshqip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shkruajshqip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CE3CD482C4D7F2400930854 /* shkruajshqipApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shkruajshqipApp.swift; sourceTree = "<group>"; };
 		2CE3CD4A2C4D7F2400930854 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -70,6 +77,7 @@
 		2CE3CD8F2C51A04D00930854 /* TopBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarButton.swift; sourceTree = "<group>"; };
 		2CE3CD922C51B54700930854 /* AppBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBarButton.swift; sourceTree = "<group>"; };
 		2CE3CD942C51BBD200930854 /* TopicItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicItem.swift; sourceTree = "<group>"; };
+		2CE3CD962C52E89B00930854 /* TopicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +105,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C1847372C52F72D004204B5 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				2C1847382C53035E004204B5 /* RegisterView.swift */,
+				2C18473E2C530B8F004204B5 /* LoginView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		2CE3CD3C2C4D7F2400930854 = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +178,7 @@
 		2CE3CD722C4D802A00930854 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2C1847372C52F72D004204B5 /* Profile */,
 				2CE3CD882C51947600930854 /* HomeView.swift */,
 				2CE3CD8B2C5194D700930854 /* ProfileView.swift */,
 				2CE3CD8D2C51951B00930854 /* SearchView.swift */,
@@ -178,6 +196,7 @@
 		2CE3CD742C4D803600930854 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2CE3CD962C52E89B00930854 /* TopicModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -233,6 +252,7 @@
 			children = (
 				2CE3CD912C51B52A00930854 /* AppBar */,
 				2CE3CD942C51BBD200930854 /* TopicItem.swift */,
+				2C18473C2C5303E9004204B5 /* InputFieldView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -384,11 +404,15 @@
 				2CE3CD7F2C4D831500930854 /* NetworkError.swift in Sources */,
 				2CE3CD8E2C51951B00930854 /* SearchView.swift in Sources */,
 				2CE3CD822C4D856700930854 /* RegisterRequest.swift in Sources */,
+				2C18473D2C5303E9004204B5 /* InputFieldView.swift in Sources */,
+				2C1847392C53035E004204B5 /* RegisterView.swift in Sources */,
 				2CE3CD952C51BBD200930854 /* TopicItem.swift in Sources */,
 				2CE3CD782C4D80AA00930854 /* Endpoint.swift in Sources */,
 				2CE3CD492C4D7F2400930854 /* shkruajshqipApp.swift in Sources */,
+				2CE3CD972C52E89B00930854 /* TopicModel.swift in Sources */,
 				2CE3CD842C4D867B00930854 /* LoginRequest.swift in Sources */,
 				2CE3CD8C2C5194D700930854 /* ProfileView.swift in Sources */,
+				2C18473F2C530B8F004204B5 /* LoginView.swift in Sources */,
 				2CE3CD902C51A04D00930854 /* TopBarButton.swift in Sources */,
 				2CE3CD872C4D874E00930854 /* AuthEndpoint.swift in Sources */,
 			);

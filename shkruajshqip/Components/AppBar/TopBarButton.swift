@@ -21,9 +21,6 @@ struct AppBar: View {
             AppBarButton(title: "favourites", tabNumber: .latest, selectedTab: $tab)
             AppBarButton(title: "latest", tabNumber: .favourites, selectedTab: $tab)
         }
-        .padding(.horizontal, 60)
-        .padding(.vertical, 30)
-        .frame(maxWidth: .infinity, alignment: .center)
     }
 }
 

@@ -11,9 +11,9 @@ struct TopicItem: View {
     let topicTitle: String
     let entryCount: String
     var body: some View {
-        HStack {
+        HStack(spacing: 30) {
             Text(topicTitle)
-                .font(.title2)
+                .font(.headline)
                 .fontWeight(.semibold)
             Spacer()
             Text(entryCount)
@@ -22,5 +22,5 @@ struct TopicItem: View {
 }
 
 #Preview {
-    TopicItem(topicTitle: "ShkruajShqip po zhvillohet", entryCount: "25")
+    TopicItem(topicTitle: "Test", entryCount: "25")
 }

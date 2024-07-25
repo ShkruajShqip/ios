@@ -10,6 +10,6 @@ import Foundation
 
 struct LoginRequest: Codable {
     
-    var email: String
-    var pssword: String
+    var email: String = ""
+    var password: String = ""
 }
