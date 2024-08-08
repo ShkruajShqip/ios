@@ -14,8 +14,8 @@ struct LoginView: View {
             Text("welcome back")
                 .font(.title2)
             VStack(spacing: 30) {
-                InputField(placeholder: "email", bindingText: loginRequest.email, isSecure: false)
-                InputField(placeholder: "password", bindingText: loginRequest.password, isSecure: true)
+                InputField(placeholder: "email", bindingText: $loginRequest.email, isSecure: false)
+                InputField(placeholder: "password", bindingText: $loginRequest.password, isSecure: true)
                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
                     Text("login")
                         .font(.headline)

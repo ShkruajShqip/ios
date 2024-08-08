@@ -7,14 +7,8 @@
 
 import SwiftUI
 
-enum AuthSheetType {
-    case register
-    case login
-}
-
 struct ProfileView: View {
-    @State var showSheet = false
-    @State var sheetType: AuthSheetType = .register
+    @EnvironmentObject var coordinator: Coordinator
     var body: some View {
             VStack(alignment: .center) {
                 Image(systemName: "person")
@@ -25,7 +19,7 @@ struct ProfileView: View {
                 Text("don't have an acoount?")
                     .font(.headline)
                     .fontWeight(.semibold)
-                Button(action: {toggleSheet(.register)}, label: {
+                Button(action: {coordinator.present(sheet: .register)}, label: {
                         Text("register")
                             .font(.headline)
                             .padding(.horizontal, 120)
@@ -37,29 +31,18 @@ struct ProfileView: View {
 
                 HStack {
                     Text("or you have an acoount?")
-                    Button(action: {toggleSheet(.login)}, label: {
+                    Button(action: {coordinator.present(sheet: .login)}, label: {
                         Text("login")
                             .foregroundStyle(.green)
                     })
                 }
                 
-            }.sheet(isPresented: $showSheet) {
-                switch sheetType {
-                case .register:
-                    RegisterView()
-                case .login:
-                    LoginView()
-                }
             }
         
-    }
-    
-    func toggleSheet(_ type: AuthSheetType) {
-        sheetType = type
-        showSheet.toggle()
     }
 }
 
 #Preview {
     ProfileView()
+        .environmentObject(Coordinator())
 }

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct HomeView: View {
+    @EnvironmentObject var coordinator: Coordinator
+    @StateObject var topicViewModel = TopicViewModel()
     var body: some View {
         VStack() {
           AppBar()
@@ -23,9 +25,16 @@ struct HomeView: View {
                     TopicItem(topicTitle: "euro 2024", entryCount: "999")
                     TopicItem(topicTitle: "mbappe", entryCount: "562")
                 }
+                .onTapGesture {
+                    coordinator.push(.entry)
+                }
                 .scrollContentBackground(.hidden)
             }
+            Button(action: {Task{await topicViewModel.getTopicById(id: 2)}}) {
+                Text("Click")
+            }
         }
+        
     }
 }
 

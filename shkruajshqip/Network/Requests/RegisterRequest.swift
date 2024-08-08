@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct RegisterRequest: Codable {
+struct RegisterRequest: Encodable {
     
     var username: String = ""
     var name: String = ""

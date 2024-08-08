@@ -19,10 +19,10 @@ protocol Endpoint {
 
 extension Endpoint {
     var scheme: String {
-        return "https"
+        return "http"
     }
     
     var host: String {
-        return "localhost:8080"
+        return "localhost"
     }
 }

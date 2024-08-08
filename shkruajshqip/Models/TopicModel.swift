@@ -8,7 +8,14 @@
 import Foundation
 
 
-struct TopicModel: Identifiable, Codable {
+struct TopicModel: Identifiable, Decodable {
     var id: Int
+    var createdOn: String
+    var createdBy: String
+    var lastModifiedOn: String
+    var lastModifiedBy: String
     var title: String
+    
+    
+    
 }

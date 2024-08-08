@@ -9,17 +9,22 @@ import SwiftUI
 
 struct RegisterView: View {
     @State var registerRequest = RegisterRequest()
+    @StateObject var authViewModel = AuthViewModel()
     var body: some View {
         VStack(spacing: 80) {
             Text("let's create your account")
                 .font(.title2)
             VStack(spacing: 30) {
-                InputField(placeholder: "username", bindingText: registerRequest.username, isSecure: false)
-                InputField(placeholder: "name", bindingText: registerRequest.name, isSecure: false)
-                InputField(placeholder: "surname", bindingText: registerRequest.surname, isSecure: false)
-                InputField(placeholder: "email", bindingText: registerRequest.email, isSecure: false)
-                InputField(placeholder: "password", bindingText: registerRequest.password, isSecure: true)
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                InputField(placeholder: "username", bindingText: $registerRequest.username, isSecure: false)
+                InputField(placeholder: "name", bindingText: $registerRequest.name, isSecure: false)
+                InputField(placeholder: "surname", bindingText: $registerRequest.surname, isSecure: false)
+                InputField(placeholder: "email", bindingText: $registerRequest.email, isSecure: false)
+                InputField(placeholder: "password", bindingText: $registerRequest.password, isSecure: true)
+                Button(action: {
+                    Task {
+                        await authViewModel.register(body: registerRequest)
+                    }
+                }, label: {
                     Text("register")
                         .font(.headline)
                         .padding(.horizontal, 120)

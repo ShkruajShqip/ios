@@ -8,8 +8,16 @@
 import SwiftUI
 
 struct SearchView: View {
+    @State private var searchPrompt = ""
     var body: some View {
-        Text("This is Search View")
+        NavigationStack {
+            List {
+                
+            }
+            .navigationTitle("Search")
+            
+        }
+        .searchable(text: $searchPrompt)
     }
 }
 

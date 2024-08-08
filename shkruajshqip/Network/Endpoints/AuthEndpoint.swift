@@ -12,11 +12,11 @@ enum AuthEndpoint {
     case login(body: LoginRequest)
 }
 
-extension AuthEndpoint {
+extension AuthEndpoint: Endpoint {
     var path: String {
         switch self {
         case .register:
-            return "api/v1/auth/register"
+            return "/api/v1/auth/register"
         case .login:
             return "/api/v1/auth/login"
         }
@@ -47,9 +47,9 @@ extension AuthEndpoint {
     var body: Data? {
         switch self {
         case .register(let body):
-            return try? JSONSerialization.data(withJSONObject: body)
+            return try? JSONEncoder().encode(body)
         case .login(let body):
-            return try? JSONSerialization.data(withJSONObject: body)
+            return try? JSONEncoder().encode(body)
         }
     }
 }

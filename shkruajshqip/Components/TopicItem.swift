@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct TopicItem: View {
+    @EnvironmentObject var coordinator: Coordinator
     let topicTitle: String
     let entryCount: String
+
     var body: some View {
         HStack(spacing: 30) {
             Text(topicTitle)
@@ -23,4 +25,5 @@ struct TopicItem: View {
 
 #Preview {
     TopicItem(topicTitle: "Test", entryCount: "25")
+        .environmentObject(Coordinator())
 }
